@@ -34,4 +34,16 @@ lat_n>38.7780
 ```
 <img width="1694" alt="image" src="https://github.com/user-attachments/assets/37ee3679-f26c-4ce2-b51c-92f5c227d3b8" />
 
+# Question 5
+```jsx
+SELECT ROUND(LONG_W, Z) 
+FROM STATION 
+WHERE LAT_N = (SELECT MIN(LAT_N) FROM STATION WHERE LAT_N > X);
+
+```
+<img width="1704" alt="image" src="https://github.com/user-attachments/assets/c4bce846-ba6a-4cf4-8a69-c18dbd2aa996" />
+
+
+
+
 
