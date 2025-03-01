@@ -44,6 +44,7 @@ WHERE LAT_N = (SELECT MIN(LAT_N) FROM STATION WHERE LAT_N > X);
 <img width="1704" alt="image" src="https://github.com/user-attachments/assets/c4bce846-ba6a-4cf4-8a69-c18dbd2aa996" />
 
 # Question 6 
+<img width="874" alt="image" src="https://github.com/user-attachments/assets/ff19e758-3048-43e8-a894-e15f024c5ba8" />
 
 <img width="1703" alt="image" src="https://github.com/user-attachments/assets/09d7a1d4-aa37-449a-85f7-7cdf57688461" />
 
