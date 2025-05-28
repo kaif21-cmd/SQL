@@ -23,3 +23,11 @@ HAVING SUM(Quantity) > 15;
 - **Primary Key:** Uniquely identifies each row (e.g., `customer_id`)
 - **Foreign Key:** Links to another table’s primary key (e.g., `order.customer_id`)
 ```
+# Question 3
+## Difference Between UNION and UNION ALL
+
+```jsx
+- **UNION:** Removes duplicates
+- **UNION ALL:** Keeps duplicates
+```
+
