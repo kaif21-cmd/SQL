@@ -3,7 +3,7 @@
 Filters rows before aggregation - where
 Filters groups after aggregation - having
 
-```
+```jsx
 SELECT Product, SUM(Quantity) as TotalQty
 FROM Sales
 WHERE Price > 2
