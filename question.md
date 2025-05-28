@@ -104,4 +104,25 @@ FROM your_table;
 | 30    | 5       | 6.0         |
 
 ```
+# Question 9 
+# How to Select Only Even Rows (Row Number)?
+```jsx
+sql
+CopyEdit
+WITH numbered AS (
+    SELECT *, ROW_NUMBER() OVER (ORDER BY id) AS rn
+    FROM employees
+)
+SELECT * FROM numbered WHERE rn % 2 = 0;
 
+```
+
+# Question 10
+
+```jsx
+| Function        | What It Does                                      | Includes NULLs? |
+| --------------- | ------------------------------------------------- | --------------- |
+| `COUNT(*)`      | Counts **all rows**, regardless of `NULL`s        | ✅ Yes           |
+| `COUNT(column)` | Counts only rows where the **column is NOT NULL** | ❌ No            |
+
+```
