@@ -87,5 +87,21 @@ HAVING COUNT(*) > 1;
 
 
 ```
+# question 8
+# How Do You Handle Dividing by Zero in SQL?
 
+```jsx
+SELECT 
+  value,
+  divisor,
+  value / NULLIF(divisor, 0) AS result
+FROM your_table;
+
+| value | divisor | result      |
+| ----- | ------- | ----------- |
+| 100   | 10      | 10.0        |
+| 50    | 0       | NULL (safe) |
+| 30    | 5       | 6.0         |
+
+```
 
