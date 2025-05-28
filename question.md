@@ -31,3 +31,47 @@ HAVING SUM(Quantity) > 15;
 - **UNION ALL:** Keeps duplicates
 ```
 
+# Question 4 
+##  What is Normalization? Why is it Important?
+
+```jsx
+- Process of **breaking data into smaller, related tables** to avoid redundancy.
+- Ensures **data integrity + easier updates.**
+```
+
+# question 5 
+## Find the Second Highest Salary
+
+```jsx
+SELECT DISTINCT Salary
+FROM Employees
+ORDER BY Salary DESC
+LIMIT 1 OFFSET 1;
+
+```
+
+
+```jsx
+# by using sub query
+SELECT MAX(Salary) AS SecondHighestSalary
+FROM Employees
+WHERE Salary < (SELECT MAX(Salary) FROM Employees);
+
+```
+# by using dense rank()
+```jsx
+SELECT Salary
+FROM (
+    SELECT Salary, DENSE_RANK() OVER (ORDER BY Salary DESC) AS rnk
+    FROM Employees
+) AS RankedSalaries
+WHERE rnk = 2;
+
+```
+# question 6 
+
+```jsx
+
+```
+
+
