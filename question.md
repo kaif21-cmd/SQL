@@ -69,8 +69,22 @@ WHERE rnk = 2;
 
 ```
 # question 6 
+# Find duplicate email addresses in the users table
 
 ```jsx
+SELECT email, COUNT(*) AS duplicate_count
+FROM users
+GROUP BY email
+HAVING COUNT(*) > 1;
+
+```
+
+# question 7
+# Defference between Delete and Truncate
+```jsx
+
+![image](https://github.com/user-attachments/assets/434dcde5-b042-45fe-906d-7f468751456b)
+
 
 ```
 
