@@ -113,7 +113,7 @@ FROM STATION;
 
 ```
 
-# question 13 Query the sum of Northern Latitudes (LAT_N) from STATION having values greater than 134542 and less 78543 than . Truncate your answer to  4 decimal places.
+# Question 13 Query the sum of Northern Latitudes (LAT_N) from STATION having values greater than 134542 and less 78543 than . Truncate your answer to  4 decimal places.
 
 ```jsx
 SELECT TRUNCATE(SUM(LAT_N), 4)
@@ -121,5 +121,33 @@ FROM STATION
 WHERE LAT_N > 38.7880 AND LAT_N < 137.2345;
 
 ```
+
+# Question 14  Difference Between ROUND() and TRUNCATE() in SQL
+
+| Function    | Description                                      | Example (Value = 12.56789, Decimal = 2) | Result   |
+|-------------|--------------------------------------------------|------------------------------------------|----------|
+| `ROUND()`   | Rounds the number to the nearest value           | `ROUND(12.56789, 2)`                     | `12.57`  |
+| `TRUNCATE()`| Cuts off the digits after the specified decimal  | `TRUNCATE(12.56789, 2)`                  | `12.56`  |
+
+---
+
+### ✅ Key Points
+
+- `ROUND()`:
+  - Rounds up if the next digit is 5 or more.
+  - Changes the digit before the cutoff.
+
+- `TRUNCATE()`:
+  - Simply removes extra digits.
+  - Does **not** change the digit before the cutoff.
+
+---
+
+### 📌 Use Cases
+
+- **ROUND()**: When you want accurate rounding (e.g., prices, marks).
+- **TRUNCATE()**: When you just want fixed-length numbers (e.g., display formatting).
+
+
 
 
