@@ -23,4 +23,11 @@ SELECT DISTINCT CITY
 FROM STATION
 WHERE LOWER(SUBSTR(CITY, 1, 1)) IN ('a', 'e', 'i', 'o', 'u');
 
+SUBSTR(CITY, 1, 1): extracts the first letter of the city name.
+
+LOWER(...): ensures case-insensitive comparison.
+
+IN ('a', 'e', 'i', 'o', 'u'): filters for vowels.
+
+DISTINCT: removes duplicates
 ```
