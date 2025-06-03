@@ -103,3 +103,14 @@ where district='california'
 select max(population)-min(population) as difference from city;
 ```
 
+# Question 12 Query the following two values from the STATION table:
+
+```jsx
+SELECT 
+    ROUND(SUM(LAT_N), 2), 
+    ROUND(SUM(LONG_W), 2) 
+FROM STATION;
+
+```
+
+
