@@ -9,3 +9,10 @@ alternate
 select distinct city from station where id%2=0;
 
 ```
+# Question 2 : 
+Find the difference between the total number of CITY entries in the table and the number of distinct CITY entries in the table.
+
+```jsx
+select count(city)-count(distinct city) as difference 
+from station;
+```
