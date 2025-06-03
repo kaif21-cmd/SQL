@@ -148,6 +148,13 @@ WHERE LAT_N > 38.7880 AND LAT_N < 137.2345;
 - **ROUND()**: When you want accurate rounding (e.g., prices, marks).
 - **TRUNCATE()**: When you just want fixed-length numbers (e.g., display formatting).
 
+# Question 15 Query the greatest value of the Northern Latitudes (LAT_N) from STATION that is less than 73821. Truncate your answer to 4 decimal places.
 
+```jsx
+SELECT TRUNCATE(MAX(LAT_N), 4)
+FROM STATION
+WHERE LAT_N < 137.2345;
 
+```
+I
 
