@@ -32,7 +32,7 @@ IN ('a', 'e', 'i', 'o', 'u'): filters for vowels.
 DISTINCT: removes duplicates
 ```
 # question 4 : Query the list of CITY names from STATION which have vowels (i.e., a, e, i, o, and u) as both their first and last characters. Your result cannot contain duplicates.
-###The LOWER() function converts all characters in a string to lowercase.
+### The LOWER() function converts all characters in a string to lowercase.
 ### String Functions: LEFT() and RIGHT()
 These functions are used to manipulate text strings by extracting a substring from either the left or right side.
 
