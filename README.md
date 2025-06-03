@@ -72,3 +72,13 @@ ORDER BY RIGHT(NAME, 3), ID ASC;
 ## ORDER BY first sorts by those characters, then by ID if needed.
 
 ```
+
+# Question 8 : Write a query that prints a list of employee names (i.e.: the name attribute) from the Employee table in alphabetical order.
+
+```jsx
+SELECT name
+FROM Employee
+ORDER BY name ASC;
+
+```
+
