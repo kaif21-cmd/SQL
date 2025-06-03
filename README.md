@@ -13,5 +13,14 @@ select distinct city from station where id%2=0;
 
 ```jsx
 select count(city)-count(distinct city) as difference 
-from station;
+from station; 
+```
+
+# Question 3 Query the list of CITY names starting with vowels (i.e., a, e, i, o, or u) from STATION. Your result cannot contain duplicates.
+
+```jsx
+SELECT DISTINCT CITY
+FROM STATION
+WHERE LOWER(SUBSTR(CITY, 1, 1)) IN ('a', 'e', 'i', 'o', 'u');
+
 ```
