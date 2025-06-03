@@ -235,4 +235,22 @@ This query works in PostgreSQL, MySQL 8+, and other SQL engines that support rec
 
 To generate a pattern with a different number of rows, change 20 to another number
 ```
+# question 19 : P(R) represents a pattern drawn by Julia in R rows. The following pattern represents P(5):
 
+```jsx
+* 
+* * 
+* * * 
+* * * * 
+* * * * *
+
+WITH RECURSIVE pattern(n) AS (
+  SELECT 1
+  UNION ALL
+  SELECT n + 1 FROM pattern WHERE n < 20
+)
+SELECT repeat('* ', n) AS row_output
+FROM pattern;
+
+
+```
