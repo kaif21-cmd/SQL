@@ -89,3 +89,10 @@ where salary>2000 and months<10
 order by 
 employee_id ASC;
 ```
+# Question 10 : Query the total population of all cities in CITY where District is California.
+```jsx
+select distinct sum(population) 
+as population 
+from city 
+where district='california'
+```
