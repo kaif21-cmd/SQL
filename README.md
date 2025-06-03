@@ -96,3 +96,10 @@ as population
 from city 
 where district='california'
 ```
+
+# Question 11 : Query the difference between the maximum and minimum populations in CITY.
+
+```jsx
+select max(population)-min(population) as difference from city;
+```
+
