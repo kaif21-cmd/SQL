@@ -280,3 +280,9 @@ WHERE CITY NOT REGEXP '^[AEIOUaeiou]'   -- Does not start with a vowel
   AND CITY NOT REGEXP '[AEIOUaeiou]$';  -- Does not end with a vowel
 
 ```
+
+# Question 23 : TEST
+```jsx
+![image](https://github.com/user-attachments/assets/5caf301c-575b-4e0b-ab22-c7de7b9fbd2d)
+
+```
