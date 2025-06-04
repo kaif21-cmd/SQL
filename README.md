@@ -309,4 +309,14 @@ union
 select character_name from characters
 ```
 
+# question 26 : 
+![image](https://github.com/user-attachments/assets/f544a2e4-0b1e-4864-8f18-ca5b384d2b45)
+
+```jsx
+SELECT player_id, level AS max_level
+FROM players
+WHERE level = (SELECT MAX(level) FROM players);
+
+```
+
 
