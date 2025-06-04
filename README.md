@@ -271,3 +271,12 @@ SELECT DISTINCT CITY
 FROM STATION
 WHERE CITY REGEXP '^[AEIOUaeiou]';
 ```
+# Question 22 : Query the list of CITY names from STATION that do not start with vowels and do not end with vowels. Your result cannot contain duplicates.
+
+```jsx
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY NOT REGEXP '^[AEIOUaeiou]'   -- Does not start with a vowel
+  AND CITY NOT REGEXP '[AEIOUaeiou]$';  -- Does not end with a vowel
+
+```
