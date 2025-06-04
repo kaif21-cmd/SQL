@@ -300,5 +300,13 @@ JOIN characters c ON p.player_id = c.player_id
 WHERE c.race = 'Elf';
 
 ```
+# Question 25 : 
+![image](https://github.com/user-attachments/assets/8b260bcd-3536-4fdb-a81e-5c7ae661b59e)
+
+```jsx
+select player_name from players
+union 
+select character_name from characters
+```
 
 
