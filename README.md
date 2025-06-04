@@ -285,3 +285,9 @@ WHERE CITY NOT REGEXP '^[AEIOUaeiou]'   -- Does not start with a vowel
 
 ![image](https://github.com/user-attachments/assets/5caf301c-575b-4e0b-ab22-c7de7b9fbd2d)
 
+# ans 
+
+![image](https://github.com/user-attachments/assets/4f1f9ae7-01f8-4170-bcee-3eef39a0bb0f)
+![image](https://github.com/user-attachments/assets/f7c18697-dbe9-4fb5-8727-c422e1d02eda)
+
+
