@@ -290,4 +290,15 @@ WHERE CITY NOT REGEXP '^[AEIOUaeiou]'   -- Does not start with a vowel
 ![image](https://github.com/user-attachments/assets/4f1f9ae7-01f8-4170-bcee-3eef39a0bb0f)
 ![image](https://github.com/user-attachments/assets/f7c18697-dbe9-4fb5-8727-c422e1d02eda)
 
+# question 24 : 
+![image](https://github.com/user-attachments/assets/973aa9de-80ac-4edf-af54-619f42229fdb)
+
+```jsx
+SELECT p.player_id, p.player_name, p.level, p.experience_points
+FROM players p
+JOIN characters c ON p.player_id = c.player_id
+WHERE c.race = 'Elf';
+
+```
+
 
