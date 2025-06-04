@@ -254,3 +254,20 @@ FROM pattern;
 
 
 ```
+
+# Question 20 : Query the list of CITY names from STATION that do not start with vowels. Your result cannot contain duplicates.
+
+```jsx
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY NOT REGEXP '^[AEIOUaeiou]';
+
+```
+
+# Question 21 : Query the list of CITY names starting with vowels (i.e., a, e, i, o, or u) from STATION. Your result cannot contain duplicates
+
+```jsx
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY REGEXP '^[AEIOUaeiou]';
+```
