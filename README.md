@@ -309,7 +309,7 @@ union
 select character_name from characters
 ```
 
-# question 26 : 
+# Question 26 : 
 ![image](https://github.com/user-attachments/assets/f544a2e4-0b1e-4864-8f18-ca5b384d2b45)
 
 ```jsx
@@ -318,5 +318,16 @@ FROM players
 WHERE level = (SELECT MAX(level) FROM players);
 
 ```
+# Question 27 : 
+![image](https://github.com/user-attachments/assets/14834c2a-0f00-4870-9b09-390b67be3b56)
+
+```jsx
+SELECT SUM(c.population) AS total_population
+FROM city AS c
+JOIN country AS d ON c.countrycode = d.code
+WHERE d.continent = 'Asia';
+
+```
+
 
 
