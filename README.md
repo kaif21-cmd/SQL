@@ -447,10 +447,15 @@ select book_id, title, author, published_year from library where rating is NULL;
 ```
 
 # Question 37 : Create a query to retrieve the employee_name, company, and salary for employees in the full-time category, ordered by salary in descending order
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/ae83872a-df1b-4118-863f-b5131fd5dbb4)
+
 ```jsx
 select employee_name, company , salary from employees where category='Full-Time' order by salary desc;
 ```
+# Question 38 : Write a query to group the employees by their department and display the total number of employees (as total_employees) in each department.
+
+![image](https://github.com/user-attachments/assets/6fc1f600-fdd8-4322-8bcb-771648c28b7d)
 
 ```jsx
+select department,count(employee_name) as total_employees from employees group by department;
 ```
