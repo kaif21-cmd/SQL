@@ -413,3 +413,14 @@ select *
 |  70013 |   3045.60 | 2012-04-25 |        3002 |        5001 |
 +--------+-----------+------------+-------------+-------------+
 ```
+
+# Codechef.
+
+```jsx
+![image](https://github.com/user-attachments/assets/64433386-6487-41a0-968e-1766f852f4bd)
+
+SELECT AVG(salary) AS avg_salary
+FROM works;
+
+
+```
