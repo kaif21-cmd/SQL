@@ -385,4 +385,12 @@ SELECT *
 4 rows in set (0.00 sec)
 
 ```
+# Question 31 From the following tables write a SQL query to find the order values greater than the average order value of 10th October 2012. Return ord_no, purch_amt, ord_date, customer_id, salesman_id.
+
+```jsx
+select *from orders
+where purch_amt>
+(select avg(purch_amt) from orders WHERE ord_date = '10/10/2012.
+
+```
 
