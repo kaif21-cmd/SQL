@@ -427,3 +427,9 @@ FROM works;
 ```jsx
 select department_name , location from departments WHERE location LIKE 'S%';
 ```
+# 34 Write a query to find the total count of books whose genre is Fiction.Note: Output column name should be fiction_count.
+![image](https://github.com/user-attachments/assets/5f7e8e01-c8d2-4818-945c-77585ce5e9e8)
+
+```jsx
+select count(*) as fiction_count from books where genre ='Fiction';
+```
