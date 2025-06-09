@@ -416,11 +416,8 @@ select *
 
 # Codechef.
 
-```jsx
 ![image](https://github.com/user-attachments/assets/64433386-6487-41a0-968e-1766f852f4bd)
-
+```jsx
 SELECT AVG(salary) AS avg_salary
 FROM works;
-
-
 ```
