@@ -433,3 +433,9 @@ select department_name , location from departments WHERE location LIKE 'S%';
 ```jsx
 select count(*) as fiction_count from books where genre ='Fiction';
 ```
+# 35
+![image](https://github.com/user-attachments/assets/b958a67b-c52c-4463-b071-09a4224e8c7b)
+
+```jsx
+select Movie_name from cinema where rating > 7 AND rating < 9;
+```
