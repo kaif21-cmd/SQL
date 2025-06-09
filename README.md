@@ -459,3 +459,9 @@ select employee_name, company , salary from employees where category='Full-Time'
 ```jsx
 select department,count(employee_name) as total_employees from employees group by department;
 ```
+# Question 39 : Write a query to retrieve the author_id, author_name, and publication_name for authors whose articles got zero views. The result should be sorted by author_id in ascending order.Return the result table sorted by id in ascending order.
+![image](https://github.com/user-attachments/assets/31946f6d-97a6-46d9-bf0e-63a957702c77)
+```jsx
+select author_id,author_name,publication_name from views where view_count='0' order by author_id asc;
+```
+
