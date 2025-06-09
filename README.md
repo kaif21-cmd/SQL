@@ -464,4 +464,20 @@ select department,count(employee_name) as total_employees from employees group b
 ```jsx
 select author_id,author_name,publication_name from views where view_count='0' order by author_id asc;
 ```
+# Question 40 important : Write a query to find the names of the top 3 distinct players by highest score who have won matches, including their scores.
+![image](https://github.com/user-attachments/assets/46156a79-3e2c-41fa-a00b-8d2740fe078a)
+
+```jsx
+SELECT DISTINCT
+    P.player_name,
+    P.score
+FROM
+    Players AS P
+JOIN
+    Matches AS M ON P.player_name = M.winner
+ORDER BY
+    P.score DESC
+LIMIT 3;
+
+```
 
