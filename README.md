@@ -394,3 +394,22 @@ where purch_amt>
 
 ```
 
+# Question 32 : From the following tables, write a SQL query to find all the orders generated in New York city. Return ord_no, purch_amt, ord_date, customer_id and salesman_id.
+
+```jsx
+select *
+    -> from orders
+    -> where salesman_id=(
+    -> select salesman_id
+    -> from salesman
+    -> where city ='new york'
+    -> );
++--------+-----------+------------+-------------+-------------+
+| ord_no | purch_amt | ord_date   | customer_id | salesman_id |
++--------+-----------+------------+-------------+-------------+
+|  70002 |     65.26 | 2012-10-05 |        3002 |        5001 |
+|  70005 |   2400.60 | 2012-07-27 |        3007 |        5001 |
+|  70008 |   5760.00 | 2012-09-10 |        3002 |        5001 |
+|  70013 |   3045.60 | 2012-04-25 |        3002 |        5001 |
++--------+-----------+------------+-------------+-------------+
+```
