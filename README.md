@@ -440,9 +440,17 @@ select count(*) as fiction_count from books where genre ='Fiction';
 select Movie_name from cinema where rating > 7 AND rating < 9;
 ```
 
-# Question 36Write a query to retrieve book_id, title, author and published_year of the books which have NULL rating for their books. Table name: Library
+# Question 36 Write a query to retrieve book_id, title, author and published_year of the books which have NULL rating for their books. Table name: Library
 ![image](https://github.com/user-attachments/assets/e3230170-cef5-4670-be68-7935ac9df122)
 ```jsx
 select book_id, title, author, published_year from library where rating is NULL;
 ```
 
+# Question 37 : Create a query to retrieve the employee_name, company, and salary for employees in the full-time category, ordered by salary in descending order
+![Uploading image.png…]()
+```jsx
+select employee_name, company , salary from employees where category='Full-Time' order by salary desc;
+```
+
+```jsx
+```
