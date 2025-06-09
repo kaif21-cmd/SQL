@@ -422,6 +422,7 @@ SELECT AVG(salary) AS avg_salary
 FROM works;
 ```
 # 33 Write a query to retrieve the department_name and location of people who live in location that starts with 'S'.
+![image](https://github.com/user-attachments/assets/6405001b-25ea-42e1-82d7-c4e20239a3f8)
 
 ```jsx
 select department_name , location from departments WHERE location LIKE 'S%';
