@@ -421,21 +421,28 @@ select *
 SELECT AVG(salary) AS avg_salary
 FROM works;
 ```
-# 33 Write a query to retrieve the department_name and location of people who live in location that starts with 'S'.
+#  Question 33 Write a query to retrieve the department_name and location of people who live in location that starts with 'S'.
 ![image](https://github.com/user-attachments/assets/6405001b-25ea-42e1-82d7-c4e20239a3f8)
 
 ```jsx
 select department_name , location from departments WHERE location LIKE 'S%';
 ```
-# 34 Write a query to find the total count of books whose genre is Fiction.Note: Output column name should be fiction_count.
+#  Question 34 Write a query to find the total count of books whose genre is Fiction.Note: Output column name should be fiction_count.
 ![image](https://github.com/user-attachments/assets/5f7e8e01-c8d2-4818-945c-77585ce5e9e8)
 
 ```jsx
 select count(*) as fiction_count from books where genre ='Fiction';
 ```
-# 35
+#  Question 35
 ![image](https://github.com/user-attachments/assets/b958a67b-c52c-4463-b071-09a4224e8c7b)
 
 ```jsx
 select Movie_name from cinema where rating > 7 AND rating < 9;
 ```
+
+# Question 36Write a query to retrieve book_id, title, author and published_year of the books which have NULL rating for their books. Table name: Library
+![image](https://github.com/user-attachments/assets/e3230170-cef5-4670-be68-7935ac9df122)
+```jsx
+select book_id, title, author, published_year from library where rating is NULL;
+```
+
