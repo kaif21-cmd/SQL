@@ -91,3 +91,37 @@ WHERE t.transaction_id IS NULL
 GROUP BY v.customer_id;
 
 ```
+
+# Write a solution to find all dates' id with higher temperatures compared to its previous dates (yesterday).
+```jsx
+
+Example 1:
+
+Input: 
+Weather table:
++----+------------+-------------+
+| id | recordDate | temperature |
++----+------------+-------------+
+| 1  | 2015-01-01 | 10          |
+| 2  | 2015-01-02 | 25          |
+| 3  | 2015-01-03 | 20          |
+| 4  | 2015-01-04 | 30          |
++----+------------+-------------+
+Output: 
++----+
+| id |
++----+
+| 2  |
+| 4  |
++----+
+```
+![image](https://github.com/user-attachments/assets/e13d3263-fb49-4052-9050-08d9974cc3e5)
+
+```jsx
+SELECT w1.id
+FROM Weather w1
+JOIN Weather w2 
+  ON DATEDIFF(w1.recordDate, w2.recordDate) = 1
+WHERE w1.temperature > w2.temperature;
+
+```
