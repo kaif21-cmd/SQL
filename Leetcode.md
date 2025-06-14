@@ -167,7 +167,7 @@ WHERE b.bonus < 1000 OR b.bonus IS NULL;
 ```
 # Write a solution to find the number of times each student attended each exam.
 Example 1:
-
+```jsx
 Input: 
 Students table:
 +------------+--------------+
@@ -219,7 +219,7 @@ Output:
 | 13         | John         | Physics      | 1              |
 | 13         | John         | Programming  | 1              |
 +------------+--------------+--------------+----------------+
-
+```
 ```jsx
 SELECT 
   s.student_id,
