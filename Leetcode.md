@@ -220,6 +220,8 @@ Output:
 | 13         | John         | Programming  | 1              |
 +------------+--------------+--------------+----------------+
 ```
+![image](https://github.com/user-attachments/assets/706c2713-8dfd-45f1-8423-e05757c4ae9a)
+
 ```jsx
 SELECT 
   s.student_id,
