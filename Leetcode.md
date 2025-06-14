@@ -32,7 +32,13 @@ Output:
 | Apple        | 2011  | 9000  |
 +--------------+-------+-------+
 ```
+![image](https://github.com/user-attachments/assets/fe138ab7-cf0b-4b74-ae9f-0acb3102f364)
 
 
 ```jsx
+
+SELECT p.product_name, s.year, s.price
+FROM product AS p
+INNER JOIN sales AS s ON p.product_id = s.product_id;
+
 ```
