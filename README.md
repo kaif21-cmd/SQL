@@ -530,11 +530,13 @@ FROM patients
 ORDER BY LENGTH(first_name), first_name;
 ```
 # Question 47 : Show the total amount of male patients and the total amount of female patients in the patients table.
+```jsx
 Display the two results in the same row.
 SELECT 
   SUM(gender = 'M') AS male_count,
   SUM(gender = 'F') AS female_count
 FROM patients;
 
+```
 
 
