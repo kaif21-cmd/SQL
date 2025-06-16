@@ -549,3 +549,8 @@ order by allergies,first_name,last_name asc;
 ```jsx
 select patient_id,diagnosis from admissions group by patient_id,diagnosis HAVING COUNT(*) > 1;
 ```
+# Question 50 : Show first name and last name of patients that weight within the range of 100 to 120 (inclusive)
+
+```jsx
+select first_name,last_name from patients where weight between 100 and 120;
+```
