@@ -488,4 +488,11 @@ SELECT
 FROM patients
 ORDER BY birth_year;
 ```
-
+# Question 42 : Show first name and last name of patients who does not have allergies. (null)
+```jsx
+SELECT
+  first_name,
+  last_name
+FROM patients
+WHERE allergies IS NULL;
+```
