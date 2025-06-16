@@ -545,3 +545,7 @@ select first_name,last_name,allergies from patients where allergies='Penicillin'
 order by allergies,first_name,last_name asc;
 ```
 
+# Question 49 : Show patient_id, diagnosis from admissions. Find patients admitted multiple times for the same diagnosis.
+```jsx
+select patient_id,diagnosis from admissions group by patient_id,diagnosis HAVING COUNT(*) > 1;
+```
