@@ -554,3 +554,10 @@ select patient_id,diagnosis from admissions group by patient_id,diagnosis HAVING
 ```jsx
 select first_name,last_name from patients where weight between 100 and 120;
 ```
+# Question 51 : Update the patients table for the allergies column. If the patient's allergies is null then replace it with 'NKA'
+```jsx
+UPDATE patients
+SET allergies = 'NKA'
+WHERE allergies IS NULL;
+
+```
