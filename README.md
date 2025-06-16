@@ -480,4 +480,12 @@ ORDER BY
 LIMIT 3;
 
 ```
+# Question 41 : Show unique birth years from patients and order them by ascending.
+![image](https://github.com/user-attachments/assets/0f71e8b5-7803-4bee-a069-66bef6e7b078)
+```jsx
+SELECT
+  DISTINCT YEAR(birth_date) AS birth_year
+FROM patients
+ORDER BY birth_year;
+```
 
