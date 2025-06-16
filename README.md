@@ -523,6 +523,12 @@ INNER JOIN admissions AS a ON p.patient_id = a.patient_id
 WHERE a.diagnosis = 'Dementia';
 
 ```
+# Question 46 : Display every patient's first_name. Order the list by the length of each name and then by alphabetically.
+```jsx
+SELECT first_name
+FROM patients
+ORDER BY LENGTH(first_name), first_name;
+```
 
 
 
