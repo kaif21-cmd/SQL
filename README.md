@@ -561,3 +561,9 @@ SET allergies = 'NKA'
 WHERE allergies IS NULL;
 
 ```
+# Question 52 : Show first name and last name concatinated into one column to show their full name.
+```jsx
+SELECT CONCAT(first_name, ' ', last_name) AS full_name
+FROM patients;
+
+```
