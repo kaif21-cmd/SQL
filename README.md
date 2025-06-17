@@ -620,3 +620,12 @@ WHERE
   (attending_doctor_id LIKE '%2%' AND patient_id >= 100 AND patient_id <= 999);
 
 ```
+# Question 60 : Show first_name, last_name, and the total number of admissions attended for each doctor.very admission has been attended by a doctor.
+```jsx
+SELECT d.first_name, d.last_name, COUNT(*) AS total_admissions
+FROM doctors d
+INNER JOIN admissions a ON d.doctor_id = a.attending_doctor_id
+GROUP BY d.first_name, d.last_name
+ORDER BY total_admissions DESC;
+
+```
