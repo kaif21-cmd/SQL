@@ -589,3 +589,13 @@ ORDER BY birth_date ASC;
 ```jsx
 select max(weight)-min(weight) from patients where last_name='Maroni';
 ```
+
+# Question 57 : Show all of the days of the month (1-31) and how many admission_dates occurred on that day. Sort by the day with most admissions to least admissions.
+
+```jsx
+SELECT DAY(admission_date) AS day_of_month, COUNT(*) AS admission_count
+FROM admissions
+GROUP BY day_of_month
+ORDER BY admission_count DESC;
+
+```
