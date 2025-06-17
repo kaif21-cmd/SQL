@@ -584,3 +584,8 @@ WHERE birth_date BETWEEN '1970-01-01' AND '1979-12-31'
 ORDER BY birth_date ASC;
 
 ```
+
+# Question 56: Show the difference between the largest weight and smallest weight for patients with the last name 'Maroni'
+```jsx
+select max(weight)-min(weight) from patients where last_name='Maroni';
+```
