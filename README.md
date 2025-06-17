@@ -599,3 +599,13 @@ GROUP BY day_of_month
 ORDER BY admission_count DESC;
 
 ```
+# Question 58 : Show all columns for patient_id 542's most recent admission_date.
+```jsx
+SELECT patient_id, admission_date, discharge_date, diagnosis, attending_doctor_id
+FROM admissions
+WHERE patient_id = 542
+ORDER BY admission_date DESC
+LIMIT 1;
+
+```
+
