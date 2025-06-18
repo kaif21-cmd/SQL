@@ -675,3 +675,13 @@ FROM (
 ) AS daily;
 
 ```
+
+# Question 65 : Show all the contact_name, address, city of all customers which are not from 'Germany', 'Mexico', 'Spain'
+
+```jsx
+
+SELECT contact_name, address, city
+FROM customers
+WHERE country NOT IN ('Germany', 'Mexico', 'Spain');
+
+```
