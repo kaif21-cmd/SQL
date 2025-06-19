@@ -714,3 +714,11 @@ ORDER BY LENGTH(CITY) DESC, CITY
 LIMIT 1;
 
 ```
+# Question 69 : Query the list of CITY names from STATION that do not start with vowels. Your result cannot contain duplicates.
+
+```jsx
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY NOT REGEXP '^[aeiouAEIOU]';
+
+```
