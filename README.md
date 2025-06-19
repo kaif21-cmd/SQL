@@ -38,6 +38,12 @@ WHERE LOWER(LEFT(CITY, 1)) IN ('a', 'e', 'i', 'o', 'u')
   AND LOWER(RIGHT(CITY, 1)) IN ('a', 'e', 'i', 'o', 'u');
 
 ```
+```jsx
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY REGEXP '^[aeiouAEIOU].*[aeiouAEIOU]$';
+
+```
 # Question 5 : Query the list of CITY names from STATION that do not end with vowels. Your result cannot contain duplicates
 
 ```jsx
