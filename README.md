@@ -21,14 +21,8 @@ from station;
 ```jsx
 SELECT DISTINCT CITY
 FROM STATION
-WHERE LOWER(SUBSTR(CITY, 1, 1)) IN ('a', 'e', 'i', 'o', 'u');
-
-SUBSTR(CITY, 1, 1): extracts the first letter of the city name.
-
-LOWER(...): ensures case-insensitive comparison.
-
-IN ('a', 'e', 'i', 'o', 'u'): filters for vowels.
-
+WHERE CITY REGEXP '^[AEIOU]'
+ORDER BY CITY;
 DISTINCT: removes duplicates
 ```
 # question 4 : Query the list of CITY names from STATION which have vowels (i.e., a, e, i, o, and u) as both their first and last characters. Your result cannot contain duplicates.
