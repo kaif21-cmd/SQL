@@ -762,3 +762,13 @@ select first_name, last_name,
 MAX(height) as height 
 from patients;
 ```
+# Question 73: Question: Show the average unit_price rounded to 2 decimal places as average_price , the total units in stock (use units_in_stock) across all products as total_stock, and the total discontinued products (use discontinued) from as total_discontinued the products table.
+
+```jsx
+SELECT 
+  ROUND(AVG(unit_price), 2) AS average_price,
+  SUM(units_in_stock) AS total_stock,
+  SUM(discontinued) AS total_discontinued
+FROM products;
+
+```
