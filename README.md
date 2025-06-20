@@ -772,3 +772,13 @@ SELECT
 FROM products;
 
 ```
+# Question 74: Description: Your task is to retrieve a list of artist names (Name) from the Artist table who don't have any associated albums in the Album table. Use the table columns and names provided in the challenge. Your output should consist of artist names (Name), ordered by their ArtistId.
+
+```jsx
+SELECT "Artist"."Name"
+FROM "Artist"
+LEFT JOIN "Album" ON "Artist"."ArtistId" = "Album"."ArtistId"
+WHERE "Album"."AlbumId" IS NULL
+ORDER BY "Artist"."ArtistId";
+
+```
