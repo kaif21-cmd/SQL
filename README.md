@@ -782,3 +782,10 @@ WHERE "Album"."AlbumId" IS NULL
 ORDER BY "Artist"."ArtistId";
 
 ```
+
+# Question 75: Your task is to write an SQL query to find patients who have been admitted multiple times for the same diagnosis. You are required to display the patient_id and diagnosis for these cases.
+```jsx
+select patient_id, diagnosis from admissions
+group by patient_id, diagnosis
+having count(*)>1;
+```
