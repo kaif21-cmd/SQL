@@ -789,3 +789,11 @@ select patient_id, diagnosis from admissions
 group by patient_id, diagnosis
 having count(*)>1;
 ```
+
+# Question 76:  Your goal is to write a SQL query to show all columns for a patient with a patient_id of 542 based on their most recent admission_date
+
+```jsx
+select* from admissions where patient_id='542'
+order by admission_date
+desc limit 1;
+```
