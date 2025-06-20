@@ -729,3 +729,24 @@ FROM STATION
 WHERE CITY NOT REGEXP '^[aeiouAEIOU]';
 
 ```
+
+# Question 70: Your task is to write an SQL query to retrieve a list of unique cities where patients in the patients table reside. The catch is, you only need to list cities that start with a vowel (A, E, I, O, U), and sort them in ascending order.
+
+```jsx
+SELECT DISTINCT city
+FROM patients
+WHERE city LIKE 'A%' 
+   OR city LIKE 'E%' 
+   OR city LIKE 'I%' 
+   OR city LIKE 'O%' 
+   OR city LIKE 'U%'
+ORDER BY city ASC;
+
+```
+```jsx
+SELECT DISTINCT city
+FROM patients
+WHERE city REGEXP '^[AEIOUaeiou]'
+ORDER BY city ASC;
+
+```
