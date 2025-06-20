@@ -756,3 +756,9 @@ ORDER BY city ASC;
 ```jsx
 select city,company_name,contact_name from customers where city like '%L%' order by contact_name asc;
 ```
+# Question 72: Retrieve the first_name, last_name, and height of the patient with the greatest height from the patients table
+```jsx
+select first_name, last_name,
+MAX(height) as height 
+from patients;
+```
