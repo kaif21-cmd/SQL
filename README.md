@@ -750,3 +750,9 @@ WHERE city REGEXP '^[AEIOUaeiou]'
 ORDER BY city ASC;
 
 ```
+
+# Question 71 : Your SQL query should fulfill the following requirements: Retrieve the city, company_name, and contact_name columns from the customers table. Filter the records to only include rows where the city name contains the letter 'L'. Sort the resulting data set by contact_name in ascending order.
+
+```jsx
+select city,company_name,contact_name from customers where city like '%L%' order by contact_name asc;
+```
