@@ -871,3 +871,33 @@ Your output should have columns named "Name" and "AlbumId".
 ```jsx
 select Name,AlbumId from Track where Milliseconds > 300000 order by name asc;
 ```
+# Question 81 : You need to create a list for an exclusive music event. Retrieve the first names and countries of customers, but only for those residing in the USA. Ensure your list is in order by first name.
+
+Tables Involved:
+
+Customer
+Columns to be Retrieved:
+
+FirstName
+Country
+Constraints:
+
+Only include records of customers from the USA.
+Results should be ordered by the FirstName.
+Expected Output Columns:
+
+FirstName
+Country
+
+```jsx
+SELECT 
+    "FirstName", 
+    "Country"
+FROM       
+    "Customer"
+WHERE 
+    "Country" = 'USA'
+ORDER BY 
+    "FirstName" ASC;
+
+```
