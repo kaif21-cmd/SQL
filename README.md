@@ -797,3 +797,12 @@ select* from admissions where patient_id='542'
 order by admission_date
 desc limit 1;
 ```
+# Questioin 77: write a SQL query that returns the name of each city and the total number of patients residing in that city with the column name as num_patients. Your query should order the results first by the total number of patients (num_patients) in descending order, and then by the city name in ascending alphabetical order
+
+```jsx
+SELECT city, COUNT(*) AS num_patients
+FROM patients
+GROUP BY city
+ORDER BY num_patients DESC, city ASC;
+
+```
