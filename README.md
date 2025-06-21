@@ -806,3 +806,29 @@ GROUP BY city
 ORDER BY num_patients DESC, city ASC;
 
 ```
+# Question 78 : bjective: Identify and list the top 5 artists based on their total sales.
+
+Start by joining the relevant tables to link artists with their sales. The tables to consider are Artist, Album, Track, and InvoiceLine.
+You will need to calculate the total sales for each artist. This involves summing up the product of UnitPrice and Quantity (from InvoiceLine) for tracks associated with each artist.
+Sort your results by TotalSales in descending order.
+Limit the output to the top 5 results.
+Desired Output:
+
+Columns:
+ArtistName: This should represent the name of the artist from the Artist table.
+TotalSales: This represents the total sales attributed to the artist, calculated as mentioned above.
+Note: Ensure your output columns are exactly named as ArtistName and TotalSales.
+
+```jsx
+SELECT 
+    "Artist"."Name" AS "ArtistName",
+    SUM("InvoiceLine"."UnitPrice" * "InvoiceLine"."Quantity") AS "TotalSales"
+FROM "Artist"
+JOIN "Album" ON "Artist"."ArtistId" = "Album"."ArtistId"
+JOIN "Track" ON "Album"."AlbumId" = "Track"."AlbumId"
+JOIN "InvoiceLine" ON "Track"."TrackId" = "InvoiceLine"."TrackId"
+GROUP BY "Artist"."ArtistId", "Artist"."Name"
+ORDER BY "TotalSales" DESC
+LIMIT 5;
+
+```
