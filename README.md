@@ -901,3 +901,8 @@ ORDER BY
     "FirstName" ASC;
 
 ```
+# Question 82: Write an SQL query to find a list of patients' first_name, last_name, and allergies who are from the city of Hamilton and have non-null values in the allergies column.
+
+```jsx
+select first_name, last_name, allergies from patients where city='Hamilton' and allergies is not null;
+```
