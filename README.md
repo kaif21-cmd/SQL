@@ -906,3 +906,15 @@ ORDER BY
 ```jsx
 select first_name, last_name, allergies from patients where city='Hamilton' and allergies is not null;
 ```
+
+# Question 83:Your challenge is to retrieve the first_name, last_name, and role of every person present in both the patients and doctors tables. You must ensure that the role for each person is correctly labeled as either "Patient" or "Doctor". Make sure to name this column as "role"
+```jsx
+SELECT first_name, last_name, 'Patient' AS role
+FROM patients
+
+UNION ALL
+
+SELECT first_name, last_name, 'Doctor' AS role
+FROM doctors;
+
+```
