@@ -931,3 +931,19 @@ ORDER BY
   "Country";
 
 ```
+# Question 85: Show the category name and the average product unit price for each category, rounding the result to two decimal places. The column names must be category_name, average_unit_price and ordered by average_unit_price in descending order
+```jsx
+SELECT 
+  c.category_name, 
+  ROUND(AVG(p.unit_price), 2) AS average_unit_price
+FROM 
+  categories AS c
+JOIN 
+  products AS p 
+  ON c.category_id = p.category_id
+GROUP BY 
+  c.category_name
+ORDER BY 
+  average_unit_price DESC;
+
+```
