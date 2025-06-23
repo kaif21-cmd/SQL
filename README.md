@@ -918,3 +918,16 @@ SELECT first_name, last_name, 'Doctor' AS role
 FROM doctors;
 
 ```
+# Question 84: Write an SQL query that counts the number of customers from each country. You should group the results by Country and order them alphabetically by Country.
+```jsx
+SELECT 
+  "Country", 
+  COUNT(*) AS "CustomerCount"
+FROM 
+  "Customer"
+GROUP BY 
+  "Country"
+ORDER BY 
+  "Country";
+
+```
