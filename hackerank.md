@@ -1,1 +1,9 @@
+```jsx
+| Sr. No. | Question Title                      | Difficulty | Category      | Solution Link                                           |
+|--------:|-------------------------------------|------------|----------------|---------------------------------------------------------|
+| 1       |Write a query that prints a list of employee names (i.e.: the name attribute) for employees in Employee having a salary greater than  per month who have been employees for less than  months. Sort your result by ascending employee_id.                | Easy       | SQL            | [View Solution](https://github.com/yourusername/repo/blob/main/sql/count-customers.sql) |
+| 2       | Category-Wise Average Unit Price    | Medium     | SQL            | [View Solution](https://github.com/yourusername/repo/blob/main/sql/category-average.sql) |
+| 3       | Clock React Component               | Easy       | React (JS)     | [View Solution](https://github.com/yourusername/repo/blob/main/react/clock-app.jsx) |
+| 4       | BMI Calculator                      | Easy       | JavaScript     | [View Solution](https://github.com/yourusername/repo/blob/main/js/bmi-calculator.js) |
 
+```
