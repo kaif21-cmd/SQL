@@ -34,3 +34,7 @@ FROM patients
 WHERE patient_id IN (1, 45, 534, 879, 1000);
 
 ```
+# 4 Show all the columns from admissions where the patient was admitted and discharged on the same day.
+```jsx
+select *from admissions where admission_date=discharge_date;
+```
