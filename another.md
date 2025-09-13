@@ -16,4 +16,21 @@ WHERE height = (
     FROM patients
   )
 ```
+# 3 Show all columns for patients who have one of the following patient_ids:
+1,45,534,879,1000
 
+```jsx
+SELECT patient_id,
+       first_name,
+       last_name,
+       gender,
+       birth_date,
+       city,
+       province_id,
+       allergies,
+       height,
+       weight
+FROM patients 
+WHERE patient_id IN (1, 45, 534, 879, 1000);
+
+```
