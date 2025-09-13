@@ -49,3 +49,12 @@ WHERE
   city = 'Hamilton'
   and allergies is not null
 ```
+
+# 6 Show unique birth years from patients and order them by ascending.
+
+```jsx
+SELECT
+  DISTINCT YEAR(birth_date) AS birth_year
+FROM patients
+ORDER BY birth_year;
+```
