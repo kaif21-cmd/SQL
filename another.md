@@ -58,8 +58,7 @@ SELECT
 FROM patients
 ORDER BY birth_year;
 ```
-# 7 Show unique first names from the patients table which only occurs once in the list.For example, if two or more people are named 'John' in the first_name column then don't include their name in the output list. If only 1 person is #
-### named 'Leo' then include them in the output.
+# 7 Show unique first names from the patients table which only occurs once in the list.For example, if two or more people are named 'John' in the first_name column then don't include their name in the output list. If only 1 person is #amed 'Leo' then include them in the output.
 ```jsx
 SELECT first_name
 FROM patients
