@@ -38,3 +38,14 @@ WHERE patient_id IN (1, 45, 534, 879, 1000);
 ```jsx
 select *from admissions where admission_date=discharge_date;
 ```
+# 5 Write a query to find list of patients first_name, last_name, and allergies where allergies are not null and are from the city of 'Hamilton'
+```jsx
+SELECT
+  first_name,
+  last_name,
+  allergies
+FROM patients
+WHERE
+  city = 'Hamilton'
+  and allergies is not null
+```
