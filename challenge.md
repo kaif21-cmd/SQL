@@ -77,4 +77,7 @@ ORDER BY t.total_amount DESC
 LIMIT 3;
 
 ```
+# How to Find the Second Highest Salary in SQL?
+<img width="782" height="140" alt="image" src="https://github.com/user-attachments/assets/dc2d937f-f695-45f2-b6fe-5acba3803119" />
+
 
