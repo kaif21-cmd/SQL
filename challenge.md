@@ -42,3 +42,17 @@ WHERE salary = (
 );
 
 ```
+# 5. Find students who scored above the average in all subjects Tables: students(student_id, name) and marks(student_id, subject_id, score)
+
+```jsx
+SELECT s.student_id, s.name, m.subject_id, m.score
+FROM students AS s
+JOIN marks AS m 
+    ON s.student_id = m.student_id
+WHERE m.score > (
+    SELECT AVG(m2.score)
+    FROM marks m2
+    WHERE m2.subject_id = m.subject_id
+);
+
+```
