@@ -30,3 +30,15 @@ JOIN orders AS o
 WHERE o.total_amount > 5000;
 
 ```
+# 4 4. List employees who have the second highest salary
+
+```jsx
+SELECT emp_id, emp_name, salary
+FROM employee
+WHERE salary = (
+    SELECT MAX(salary)
+    FROM employee
+    WHERE salary < (SELECT MAX(salary) FROM employee)
+);
+
+```
