@@ -64,3 +64,17 @@ GROUP BY s.student_id, s.name
 HAVING AVG(m.score) > (SELECT AVG(score) FROM marks);
 
 ```
+# . 6 Find the top 3 customers based on total order amount
+```jsx
+SELECT c.customer_id, c.name, total_amount
+FROM customers c
+JOIN (
+    SELECT customer_id, SUM(total_amount) AS total_amount
+    FROM orders
+    GROUP BY customer_id
+) t ON c.customer_id = t.customer_id
+ORDER BY t.total_amount DESC
+LIMIT 3;
+
+```
+
