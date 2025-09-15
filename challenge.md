@@ -20,3 +20,13 @@ WHERE price > (
 );
 
 ```
+# 3 . Find customers who have placed orders with total amount greater than 5000 Tables: customers(customer_id, name) and orders(order_id, customer_id, total_amount)
+
+```jsx
+SELECT c.customer_id, c.name, o.order_id, o.customer_id, o.total_amount
+FROM customers AS c
+JOIN orders AS o 
+    ON c.customer_id = o.customer_id
+WHERE o.total_amount > 5000;
+
+```
