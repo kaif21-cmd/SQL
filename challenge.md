@@ -80,4 +80,6 @@ LIMIT 3;
 # How to Find the Second Highest Salary in SQL?
 <img width="782" height="140" alt="image" src="https://github.com/user-attachments/assets/dc2d937f-f695-45f2-b6fe-5acba3803119" />
 
+<img width="831" height="302" alt="image" src="https://github.com/user-attachments/assets/434536c1-7c79-44f9-8ea0-a8672435db58" />
+
 
