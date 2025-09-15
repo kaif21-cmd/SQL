@@ -56,3 +56,11 @@ WHERE m.score > (
 );
 
 ```
+```jsx
+SELECT s.student_id, s.name
+FROM students s
+JOIN marks m ON s.student_id = m.student_id
+GROUP BY s.student_id, s.name
+HAVING AVG(m.score) > (SELECT AVG(score) FROM marks);
+
+```
