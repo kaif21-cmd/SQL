@@ -947,3 +947,252 @@ ORDER BY
   average_unit_price DESC;
 
 ```
+
+# Another Fucking 
+### SQL Mock Test - Medium/Hard Level (20 Questions)
+
+Below are all the questions I asked you along with their correct solutions.
+
+---
+
+### Question 1
+
+**Find the second highest salary from Employee table.**
+
+```sql
+SELECT MAX(salary)
+FROM Employee
+WHERE salary < (SELECT MAX(salary) FROM Employee);
+```
+
+### Question 2
+
+**Find total amount spent by each customer.**
+
+```sql
+SELECT customer_id, SUM(amount) AS total_amount_spent
+FROM Orders
+GROUP BY customer_id;
+```
+
+### Question 3
+
+**Display top 3 students with highest marks.**
+
+```sql
+SELECT student_id, name, marks
+FROM Student
+ORDER BY marks DESC
+LIMIT 3;
+```
+
+### Question 4
+
+**List customers who have not placed any order.**
+
+```sql
+SELECT c.customer_id, c.customer_name
+FROM Customer c
+LEFT JOIN Orders o ON c.customer_id = o.customer_id
+WHERE o.order_id IS NULL;
+```
+
+### Question 5
+
+**Average salary per department.**
+
+```sql
+SELECT department, AVG(salary) AS avg_salary_per_department
+FROM Employee
+GROUP BY department;
+```
+
+### Question 6
+
+**Highest order amount for each customer.**
+
+```sql
+SELECT customer_id, MAX(amount) AS highest_order_amount_per_customer
+FROM Orders
+GROUP BY customer_id;
+```
+
+### Question 7
+
+**Employees who joined in 2023.**
+
+```sql
+SELECT emp_id, name, department, salary
+FROM Employee
+WHERE YEAR(join_date) = 2023;
+```
+
+### Question 8
+
+**Total quantity sold per month.**
+
+```sql
+SELECT DATE_FORMAT(sale_date, '%Y-%m') AS sale_month,
+       SUM(quantity) AS total_quantity_sold
+FROM Sales
+GROUP BY sale_month
+ORDER BY sale_month;
+```
+
+### Question 9
+
+**Departments where average salary > 50,000.**
+
+```sql
+SELECT department
+FROM Employee
+GROUP BY department
+HAVING AVG(salary) > 50000;
+```
+
+### Question 10
+
+**Employee names with department names.**
+
+```sql
+SELECT e.name AS employee_name, d.department_name
+FROM Employee e
+INNER JOIN Department d ON e.department_id = d.department_id;
+```
+
+### Question 11
+
+**Customers with more than 5 orders.**
+
+```sql
+SELECT customer_id, COUNT(order_id) AS order_count
+FROM Orders
+GROUP BY customer_id
+HAVING COUNT(order_id) > 5;
+```
+
+### Question 12
+
+**Give 10% salary increase to 'Sales' department.**
+
+```sql
+UPDATE Employee
+SET salary = salary * 1.10
+WHERE department = 'Sales';
+```
+
+### Question 13
+
+**Month with maximum total sales.**
+(SQL Server version)
+
+```sql
+SELECT TOP 1 FORMAT(order_date, 'yyyy-MM') AS sale_month_year,
+       SUM(amount) AS total_sales
+FROM Orders
+GROUP BY FORMAT(order_date, 'yyyy-MM')
+ORDER BY total_sales DESC;
+```
+
+(MySQL version)
+
+```sql
+SELECT DATE_FORMAT(order_date, '%Y-%m') AS sale_month_year,
+       SUM(amount) AS total_sales
+FROM Orders
+GROUP BY sale_month_year
+ORDER BY total_sales DESC
+LIMIT 1;
+```
+
+### Question 14
+
+**Rank employees by salary descending.**
+
+```sql
+SELECT emp_id, name, department, salary,
+       RANK() OVER (ORDER BY salary DESC) AS ranking_kaif
+FROM Employee;
+```
+
+### Question 15
+
+**Cumulative total sales per order.**
+
+```sql
+SELECT order_id, customer_id, amount, order_date,
+       SUM(amount) OVER (
+           ORDER BY order_date, order_id
+           ROWS UNBOUNDED PRECEDING
+       ) AS cumulative_sales
+FROM Orders
+ORDER BY order_date, order_id;
+```
+
+### Question 16
+
+**Employees with salary above average in their department.**
+
+```sql
+SELECT emp_id, name, department, salary
+FROM Employee e
+WHERE salary > (
+    SELECT AVG(salary)
+    FROM Employee
+    WHERE department = e.department
+);
+```
+
+### Question 17
+
+**Second largest order amount.**
+
+```sql
+SELECT MAX(amount)
+FROM Orders
+WHERE amount < (SELECT MAX(amount) FROM Orders);
+```
+
+### Question 18
+
+**Delete HR employees with salary < 30,000.**
+
+```sql
+DELETE FROM Employee
+WHERE department = 'HR'
+  AND salary < 30000;
+```
+
+### Question 19
+
+**Min, Max, Avg salary per department.**
+
+```sql
+SELECT department,
+       MIN(salary) AS min_salary,
+       MAX(salary) AS max_salary,
+       AVG(salary) AS avg_salary
+FROM Employee
+GROUP BY department
+ORDER BY department;
+```
+
+### Question 20
+
+**Number of orders per day (including zero orders with calendar table).**
+
+```sql
+-- Simplified (existing order dates only)
+SELECT order_date, COUNT(order_id) AS counts_fig
+FROM Orders
+GROUP BY order_date
+ORDER BY order_date;
+
+-- With calendar table to include zero orders
+SELECT c.date AS order_date, COUNT(o.order_id) AS counts_fig
+FROM Calendar c
+LEFT JOIN Orders o ON c.date = o.order_date
+GROUP BY c.date
+ORDER BY c.date;
+```
+
