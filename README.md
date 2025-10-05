@@ -948,7 +948,7 @@ ORDER BY
 
 ```
 
-# Another Fucking 
+# Another Fucking Stuff.
 ### SQL Mock Test - Medium/Hard Level (20 Questions)
 
 Below are all the questions I asked you along with their correct solutions.
