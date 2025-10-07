@@ -38,3 +38,8 @@ FROM products
 WHERE price > (SELECT AVG(price) FROM products);
 
 ```
+
+# We have a table employees(emp_id, emp_name, department, salary) Write a query to find the average salary per department, but only for departments where the average salary is greater than 50000.
+```jsx
+SELECT department, AVG(salary) AS avg_salary FROM employee GROUP BY department HAVING AVG(salary) > 50000;
+```
