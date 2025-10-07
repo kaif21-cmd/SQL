@@ -10,3 +10,15 @@ FROM orders
 ORDER BY customer_id, order_date;
 
 ```
+
+# 2 We have a table orders(order_id, customer_id, order_date, total_amount) Write a query to find the month-wise total sales for the year 2025, showing month and total_sales
+```jsx
+SELECT 
+    MONTH(order_date) AS month,
+    SUM(total_amount) AS month_wise_total
+FROM orders
+WHERE YEAR(order_date) = 2025
+GROUP BY MONTH(order_date)
+ORDER BY MONTH(order_date);
+
+```
