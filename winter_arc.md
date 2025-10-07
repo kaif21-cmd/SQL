@@ -31,3 +31,10 @@ GROUP BY department
 HAVING COUNT(*) > 5;
 
 ```
+# We have a table products(product_id, product_name, price, category).Write a query to find all products whose price is above the average price of all products.
+```jsx
+SELECT product_id, product_name, price, category
+FROM products
+WHERE price > (SELECT AVG(price) FROM products);
+
+```
