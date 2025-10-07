@@ -22,3 +22,12 @@ GROUP BY MONTH(order_date)
 ORDER BY MONTH(order_date);
 
 ```
+# 3 We have a table employees(emp_id, emp_name, department, salary).  Write a query to find the departments that have more than 5 employee
+
+```jsx
+SELECT department, COUNT(*) AS total_employees
+FROM employees
+GROUP BY department
+HAVING COUNT(*) > 5;
+
+```
