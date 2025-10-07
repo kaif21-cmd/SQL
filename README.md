@@ -1195,4 +1195,10 @@ LEFT JOIN Orders o ON c.date = o.order_date
 GROUP BY c.date
 ORDER BY c.date;
 ```
+SELECT 
+    region,
+    customer_name,
+    total_spent,
+    RANK() OVER (PARTITION BY region ORDER BY total_spent DESC) AS regional_rank
+FROM customer;
 
