@@ -1,6 +1,6 @@
-```jsx
-Write a query to calculate the cumulative total amount spent by each customer, ordered by order_date.
-```
+
+ #  question 1 Write a query to calculate the cumulative total amount spent by each customer, ordered by order_date.
+
 ```jsx
 SELECT 
     customer_id,
