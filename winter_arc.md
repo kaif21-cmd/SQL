@@ -180,3 +180,26 @@ mysql> with ranked as(
 +-------------+----------+------------+-----+
 17 rows in set (0.01 sec)
 ```
+# 11. find the highest-paid employee in each department.
+```jsx
+mysql> SELECT
+    ->     employee_name,
+    ->     department_id,
+    ->     salary
+    -> FROM employee e1
+    -> WHERE salary = (
+    ->     SELECT MAX(salary)
+    ->     FROM employee e2
+    ->     WHERE e2.department_id = e1.department_id
+    -> );
++---------------+---------------+-----------+
+| employee_name | department_id | salary    |
++---------------+---------------+-----------+
+| Sarah Connor  |            30 | 150000.00 |
+| Robert Lee    |            10 | 110000.00 |
+| Michael Wang  |            40 |  85000.00 |
+| Will Smith    |            20 |  72000.00 |
+| Jennifer Fox  |            50 | 130000.00 |
++---------------+---------------+-----------+
+5 rows in set (0.02 sec)
+```
