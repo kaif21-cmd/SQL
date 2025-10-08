@@ -89,3 +89,36 @@ mysql> select
 20 rows in set (0.00 sec)
 ```
 
+# 8 find the TOP 3 highest salary in each department
+```jsx
+mysql> with ranked as(
+    -> select
+    -> employee_id,
+    -> employee_name,
+    -> department_id,
+    -> salary,
+    -> dense_rank() over (partition by department_id order by salary desc) as rnk
+    -> from employee)
+    -> select *from ranked where rnk <=3;
++-------------+----------------+---------------+-----------+-----+
+| employee_id | employee_name  | department_id | salary    | rnk |
++-------------+----------------+---------------+-----------+-----+
+|         120 | Unassigned Dev |          NULL |  55000.00 |   1 |
+|         105 | Robert Lee     |            10 | 110000.00 |   1 |
+|         107 | David Wilson   |            10 |  70000.00 |   2 |
+|         116 | Tom Hanks      |            10 |  65000.00 |   3 |
+|         117 | Will Smith     |            20 |  72000.00 |   1 |
+|         108 | Jessica Chen   |            20 |  50000.00 |   2 |
+|         101 | Sarah Connor   |            30 | 150000.00 |   1 |
+|         102 | John Smith     |            30 | 120000.00 |   2 |
+|         103 | Jane Doe       |            30 |  95000.00 |   3 |
+|         119 | Leo DiCaprio   |            30 |  95000.00 |   3 |
+|         109 | Michael Wang   |            40 |  85000.00 |   1 |
+|         113 | Lisa Ray       |            40 |  45000.00 |   2 |
+|         114 | Ben Gates      |            40 |  45000.00 |   2 |
+|         118 | Jennifer Fox   |            50 | 130000.00 |   1 |
+|         110 | Chris Martin   |            50 | 105000.00 |   2 |
+|         111 | Kelly Clark    |            50 |  75000.00 |   3 |
++-------------+----------------+---------------+-----------+-----+
+16 rows in set (0.01 sec)
+```
