@@ -46,5 +46,12 @@ SELECT department, AVG(salary) AS avg_salary FROM employee GROUP BY department H
 ```
 # Ranke employee based on salary with in each department
 ```jsx
+mysql> select
+    -> employee_name,
+    -> salary,
+    -> department_id
+    -> ,
+    -> rank() over (partition by department_id order by salary desc) as salary_department_wise
+    -> from employee;
 ```
 
