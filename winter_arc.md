@@ -122,3 +122,27 @@ mysql> with ranked as(
 +-------------+----------------+---------------+-----------+-----+
 16 rows in set (0.01 sec)
 ```
+# 9 Rank the customer by total-purchase.
+```jsx
+mysql> SELECT
+    ->     customer_id,
+    ->     SUM(total_amount) AS total_spent,
+    ->     RANK() OVER (ORDER BY SUM(total_amount) DESC) AS ranking
+    -> FROM orders
+    -> GROUP BY customer_id;
++-------------+-------------+---------+
+| customer_id | total_spent | ranking |
++-------------+-------------+---------+
+|         203 |     9150.00 |       1 |
+|         201 |     9120.00 |       2 |
+|         205 |     6600.00 |       3 |
+|         202 |     1620.00 |       4 |
+|         206 |     1300.00 |       5 |
+|         210 |      900.00 |       6 |
+|         209 |      840.00 |       7 |
+|         207 |      300.00 |       8 |
+|         204 |      200.00 |       9 |
+|         208 |      150.00 |      10 |
++-------------+-------------+---------+
+10 rows in set (0.01 sec)
+```
