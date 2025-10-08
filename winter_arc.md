@@ -15,6 +15,7 @@ ORDER BY customer_id, order_date;
 ```jsx
 SELECT 
     MONTH(order_date) AS month,
+
     SUM(total_amount) AS month_wise_total
 FROM orders
 WHERE YEAR(order_date) = 2025
@@ -43,3 +44,7 @@ WHERE price > (SELECT AVG(price) FROM products);
 ```jsx
 SELECT department, AVG(salary) AS avg_salary FROM employee GROUP BY department HAVING AVG(salary) > 50000;
 ```
+# Ranke employee based on salary with in each department
+```jsx
+```
+
