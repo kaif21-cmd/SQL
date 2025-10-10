@@ -203,3 +203,14 @@ mysql> SELECT
 +---------------+---------------+-----------+
 5 rows in set (0.02 sec)
 ```
+# 12 Find all employees who earn more than the average salary.
+```jsx
+WITH AvgSalary AS (
+    SELECT AVG(Salary) AS avg_sal
+    FROM Employees
+)
+SELECT Name, Salary
+FROM Employees
+WHERE Salary > (SELECT avg_sal FROM AvgSalary);
+
+```
