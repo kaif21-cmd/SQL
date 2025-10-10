@@ -250,3 +250,20 @@ FROM MonthlySales
 WHERE total_sales > 50000;
 
 ```
+# 16 Find employees in IT department and earning more than 5000.
+```jsx
+WITH HighSalary AS (
+    SELECT EmployeeID, Name
+    FROM Employees
+    WHERE Salary > 5000
+),
+ITDept AS (
+    SELECT EmployeeID, Name
+    FROM Employees
+    WHERE Department = 'IT'
+)
+SELECT h.Name
+FROM HighSalary h
+INNER JOIN ITDept i ON h.EmployeeID = i.EmployeeID;
+
+```
