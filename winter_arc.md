@@ -214,3 +214,15 @@ FROM Employees
 WHERE Salary > (SELECT avg_sal FROM AvgSalary);
 
 ```
+# 13 Total salary per department, then select departments with total salary > 9000.
+```jsx
+WITH DeptSalary AS (
+    SELECT Department, SUM(Salary) AS total_salary
+    FROM Employees
+    GROUP BY Department
+)
+SELECT *
+FROM DeptSalary
+WHERE total_salary > 9000;
+
+```
