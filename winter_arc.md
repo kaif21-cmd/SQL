@@ -238,3 +238,15 @@ FROM RankedEmp
 WHERE rn = 1;
 
 ```
+# :15  Calculate total sales per month, return months with sales > 50000.
+```jsx
+WITH MonthlySales AS (
+    SELECT YEAR(OrderDate) AS yr, MONTH(OrderDate) AS mon, SUM(Amount) AS total_sales
+    FROM Sales
+    GROUP BY YEAR(OrderDate), MONTH(OrderDate)
+)
+SELECT *
+FROM MonthlySales
+WHERE total_sales > 50000;
+
+```
