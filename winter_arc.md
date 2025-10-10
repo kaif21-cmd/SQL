@@ -226,3 +226,15 @@ FROM DeptSalary
 WHERE total_salary > 9000;
 
 ```
+# 14 Assign row number to employees per department by descending salary and pick highest per department.
+```jsx
+WITH RankedEmp AS (
+    SELECT Name, Department, Salary,
+           ROW_NUMBER() OVER (PARTITION BY Department ORDER BY Salary DESC) AS rn
+    FROM Employees
+)
+SELECT Name, Department, Salary
+FROM RankedEmp
+WHERE rn = 1;
+
+```
