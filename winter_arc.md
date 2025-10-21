@@ -280,3 +280,12 @@ GROUP BY num, grp
 HAVING COUNT(*) >= 3;
 
 ```
+# 18 employees who earn more than their managers.
+```jsx
+SELECT e.name AS Employee
+FROM Employee e
+JOIN Employee m
+ON e.managerId = m.id
+WHERE e.salary > m.salary;
+
+```
