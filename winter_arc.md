@@ -289,3 +289,12 @@ ON e.managerId = m.id
 WHERE e.salary > m.salary;
 
 ```
+# 19 Duplicate Emails.
+```jsx
+SELECT 
+    email
+FROM Person
+GROUP BY email
+HAVING COUNT(*) > 1;
+
+```
