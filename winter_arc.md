@@ -298,7 +298,7 @@ GROUP BY email
 HAVING COUNT(*) > 1;
 
 ```
-#20 Customer Who never orders.
+# 20 Customer Who never orders.
 ```jsx
 SELECT c.name AS Customers
 FROM Customers c
