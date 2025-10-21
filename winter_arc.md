@@ -306,3 +306,19 @@ LEFT JOIN Orders o
   ON c.id = o.customerId
 WHERE o.id IS NULL;
 ```
+# 21 Department Highest salary from both table.
+```jsx
+SELECT 
+    d.name AS Department,
+    e.name AS Employee,
+    e.salary AS Salary
+FROM Employee e
+JOIN Department d
+    ON e.departmentId = d.id
+WHERE (e.departmentId, e.salary) IN (
+    SELECT departmentId, MAX(salary)
+    FROM Employee
+    GROUP BY departmentId
+);
+
+```
