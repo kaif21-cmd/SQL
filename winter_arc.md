@@ -298,3 +298,11 @@ GROUP BY email
 HAVING COUNT(*) > 1;
 
 ```
+#20 Customer Who never orders.
+```jsx
+SELECT c.name AS Customers
+FROM Customers c
+LEFT JOIN Orders o
+  ON c.id = o.customerId
+WHERE o.id IS NULL;
+```
