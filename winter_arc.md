@@ -359,3 +359,11 @@ with ranked as (
 )
 select *from ranked where rnk<=3;
 ```
+# 24 Delete Duplicate Email
+```jsx
+DELETE p1
+FROM Person p1
+JOIN Person p2
+ON p1.email = p2.email 
+AND p1.id > p2.id;
+```
