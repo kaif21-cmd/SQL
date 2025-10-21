@@ -346,3 +346,16 @@ JOIN Department d
 WHERE e.salary_rank <= 3;
 
 ```
+# 23 Department top 3 salary.
+```jsx
+with ranked as (
+    select
+    department,
+    employee,
+    salary,
+    dense_rank() over (partition by department order by salary desc)
+    as rnk
+    from employee
+)
+select *from ranked where rnk<=3;
+```
